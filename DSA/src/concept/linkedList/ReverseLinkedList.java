@@ -27,4 +27,11 @@ public class ReverseLinkedList {
         }
         return prev;
     }
+
+    static Node reverseUsingRecursion(Node head) {
+        Node first = head;
+        Node rest = head.next;
+        reverseUsingRecursion(rest);
+        return head;
+    }
 }
